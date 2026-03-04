@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voor Individuen — De Veroovering | Coaching & Retraite</title>
+  <meta name="description" content="Coaching bij levens- en loopbaanvragen, verlies, verandering, hoogsensitiviteit en pensioen in zicht. Nathalie Roovers, De Veroovering.">
+  <link rel="icon" href="images/spiraal.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="78fe1fda-0435-4b42-ab40-612bfb966322"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { primary: '#3a6ca1', 'primary-dark': '#2d5a8a', accent: '#c8956c', 'accent-light': '#d4a67d', 'warm-white': '#FAFAF7', 'warm-beige': '#f0ece4', dark: '#1a1a2e' },
+        fontFamily: { script: ['Caveat', 'cursive'], sans: ['Quicksand', 'sans-serif'] }
+      }}
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .fade-in { opacity: 1; transform: none; transition: none; } }
+  </style>
+</head>
+<body class="bg-warm-white text-dark font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 cursor-pointer">
+        <img src="images/spiraal.png" alt="De Veroovering" class="h-10 w-10">
+        <span class="font-script text-2xl text-primary font-bold">De Veroovering</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="individuen.html" class="text-primary font-bold cursor-pointer">Voor Individuen</a>
+        <a href="organisaties.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Voor Organisaties</a>
+        <a href="gastverblijf.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Gastverblijf</a>
+        <a href="groepsruimte.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Groepsruimte</a>
+        <a href="over-nathalie.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Over Nathalie</a>
+        <a href="tarieven.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Tarieven</a>
+        <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-xl hover:bg-primary-dark transition-colors duration-200 cursor-pointer">Contact</a>
+      </div>
+      <button id="menuBtn" class="md:hidden cursor-pointer p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-4 space-y-3">
+        <a href="individuen.html" class="block text-primary font-bold py-2">Voor Individuen</a>
+        <a href="organisaties.html" class="block text-dark hover:text-primary py-2 cursor-pointer">Voor Organisaties</a>
+        <a href="gastverblijf.html" class="block text-dark hover:text-primary py-2 cursor-pointer">Gastverblijf</a>
+        <a href="groepsruimte.html" class="block text-dark hover:text-primary py-2 cursor-pointer">Groepsruimte</a>
+        <a href="over-nathalie.html" class="block text-dark hover:text-primary py-2 cursor-pointer">Over Nathalie</a>
+        <a href="tarieven.html" class="block text-dark hover:text-primary py-2 cursor-pointer">Tarieven</a>
+        <a href="contact.html" class="block bg-primary text-white text-center px-4 py-3 rounded-xl cursor-pointer">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-16 h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="images/individuen_vraag.jpg" alt="Coaching voor individuen" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-dark/50"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Voor Individuen</h1>
+      <p class="text-lg opacity-90 max-w-xl mx-auto">Jouw vraag — of beter gezegd: jouw wens — is het vertrekpunt van onze samenwerking.</p>
+    </div>
+  </section>
+
+  <!-- Jouw Vraag -->
+  <section class="py-20 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto fade-in">
+      <h2 class="font-script text-4xl text-primary mb-6">Jouw Vraag</h2>
+      <p class="text-dark/80 leading-relaxed mb-6">
+        Jouw vraag is het vertrekpunt van onze samenwerking. Of beter gezegd: jouw WENS. Want achter een vraag, dilemma of klacht gaat een wens schuil. Een wens om helderheid te krijgen, om iets tot stand te brengen, te ervaren of uit te proberen, achter je te laten of juist voor je te kunnen zien.
+      </p>
+      <p class="text-dark/80 leading-relaxed mb-6">
+        Centraal stellen wat je in wezen verlangt geeft een heel andere energie dan het analyseren, overwinnen of onderdrukken van iets wat je niet aanstaat. De erkenning van jouw persoonlijke verlangen is al een groeisprong op zich.
+      </p>
+      <p class="text-dark/80 leading-relaxed mb-8">
+        Vervolgens kun je gaan werken aan de realisatie, het dichter bij elkaar brengen van wens en werkelijkheid. Bij de weg van wens naar werkelijkheid kan ik je begeleiding bieden.
+      </p>
+
+      <h3 class="text-xl font-bold mb-4">Voorbeelden van vragen en wensen:</h3>
+      <div class="space-y-4">
+        <div class="bg-warm-beige rounded-xl p-6 fade-in">
+          <p class="text-dark/80 italic">"Sinds het overlijden van mijn broer vind ik het moeilijk om te genieten. Alsof ik niet meer voluit kan leven. Het is alweer ruim een jaar geleden, maar nog steeds voel ik me zo..."</p>
+        </div>
+        <div class="bg-warm-beige rounded-xl p-6 fade-in">
+          <p class="text-dark/80 italic">"Ik houd veel van mijn werk, maar de balans is zoek. Ik heb allerlei lichamelijke klachten en slaap slecht. Vroeger ging ik fluitend aan de slag, nu kom ik met hoofdpijn thuis."</p>
+        </div>
+        <div class="bg-warm-beige rounded-xl p-6 fade-in">
+          <p class="text-dark/80 italic">"Ik heb behoefte aan rust en ruimte. Dat er even niets moet. Maar hoe organiseer ik het?"</p>
+        </div>
+        <div class="bg-warm-beige rounded-xl p-6 fade-in">
+          <p class="text-dark/80 italic">"Sinds dat conflict twijfel ik aan alles. Mijn zelfvertrouwen is geschaad. Hoe kan ik dit herstellen?"</p>
+        </div>
+        <div class="bg-warm-beige rounded-xl p-6 fade-in">
+          <p class="text-dark/80 italic">"Ik werk nu ruim 10 jaar in deze functie en merk dat ik alles al eens heb gezien en gedaan. Ik krijg er geen energie meer van."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mijn Aanbod -->
+  <section class="py-20 bg-warm-beige px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-script text-4xl text-primary mb-8 fade-in">Mijn Aanbod</h2>
+
+      <div class="bg-white rounded-2xl p-8 shadow-md mb-8 fade-in">
+        <h3 class="text-2xl font-bold mb-4">Coaching</h3>
+        <p class="text-dark/80 leading-relaxed mb-4">
+          Coaching helpt je om te vertrouwen op jouw talent en groeikracht, om jouw verlangens en ideeën waar te maken en je minder te laten bepalen door belemmeringen in jezelf en om je heen. Het helpt je om jouw denken, voelen en doen beter op elkaar af te stemmen en daardoor meer balans te vinden.
+        </p>
+        <p class="text-dark/80 leading-relaxed mb-4">
+          Als coach ben ik een klankbord, luisterend oor, kritische kameraad, kennisoverdrager, spiegel en creatieve meedenker.
+        </p>
+        <p class="text-dark/80 leading-relaxed">
+          In een kennismakingsgesprek bepalen we samen wat je vraag of wens is. Daarbij kun je denken aan: communicatie- en observatieopdrachten, reflectievragen, creatieve opdrachten, familie- en persoonlijkheidsopstellingen, EMDR, aandachts- en ontspanningsoefeningen (mindfulness), loopbaan- en leefstijladvies.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-md fade-in">
+        <h3 class="text-2xl font-bold mb-4">Gastverblijf & Goed Gesprek (retraite)</h3>
+        <p class="text-dark/80 leading-relaxed mb-4">
+          Het kan zijn dat je niet alleen gebaat bent bij een goed gesprek, maar ook wat tijd en ruimte nodig hebt om tot jezelf te komen. Ik bied je de mogelijkheid van een verblijf in mijn Tuinhuis gecombineerd met één of meer coachingssessies.
+        </p>
+        <p class="text-dark/80 leading-relaxed">
+          Jij bepaalt de duur van het verblijf, het ritme en tempo van onze samenwerking. Natuurlijk kun je een coachingstraject of G&G ook regelen via jouw werkgever.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-primary text-white px-4 md:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center fade-in">
+      <h2 class="font-script text-4xl mb-6">Kennismaken?</h2>
+      <p class="text-lg opacity-90 mb-8">Een kennismakingsgesprek is vrijblijvend. Neem contact op en we verkennen samen jouw vraag.</p>
+      <a href="contact.html" class="bg-accent hover:bg-accent-light text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-200 cursor-pointer text-lg inline-block">Neem contact op</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white/80 py-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <img src="images/spiraal.png" alt="De Veroovering" class="h-8 w-8">
+          <span class="font-script text-2xl text-white font-bold">De Veroovering</span>
+        </div>
+        <p class="text-white/60 leading-relaxed">Maak ruimte voor groei. Coaching, training, gastverblijf en groepsruimte in Neerlangel bij Ravenstein.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Pagina's</h4>
+        <ul class="space-y-2">
+          <li><a href="individuen.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Voor Individuen</a></li>
+          <li><a href="organisaties.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Voor Organisaties</a></li>
+          <li><a href="gastverblijf.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Gastverblijf</a></li>
+          <li><a href="groepsruimte.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Groepsruimte</a></li>
+          <li><a href="tarieven.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Tarieven</a></li>
+          <li><a href="reacties.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Reacties</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4">Contact</h4>
+        <ul class="space-y-2">
+          <li><a href="mailto:info@deveroovering.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@deveroovering.nl</a></li>
+          <li><a href="tel:0623956027" class="hover:text-white transition-colors duration-200 cursor-pointer">06 - 23 95 60 27</a></li>
+          <li>Zwarteweg 2, 5355 KE Neerlangel</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/40">
+      <p>&copy; 2026 De Veroovering — Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

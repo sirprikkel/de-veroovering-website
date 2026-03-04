@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groepsruimte De Buitenruimte — De Veroovering</title>
+  <meta name="description" content="De Buitenruimte: een houten gebouw van 40 m² voor workshops, vergaderingen en teamsessies. Maximaal 8 personen.">
+  <link rel="icon" href="images/spiraal.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="78fe1fda-0435-4b42-ab40-612bfb966322"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { primary: '#3a6ca1', 'primary-dark': '#2d5a8a', accent: '#c8956c', 'accent-light': '#d4a67d', 'warm-white': '#FAFAF7', 'warm-beige': '#f0ece4', dark: '#1a1a2e' },
+        fontFamily: { script: ['Caveat', 'cursive'], sans: ['Quicksand', 'sans-serif'] }
+      }}
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .fade-in { opacity: 1; transform: none; transition: none; } }
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 0.5rem; }
+  </style>
+</head>
+<body class="bg-warm-white text-dark font-sans">
+
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2 cursor-pointer"><img src="images/spiraal.png" alt="De Veroovering" class="h-10 w-10"><span class="font-script text-2xl text-primary font-bold">De Veroovering</span></a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="individuen.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Voor Individuen</a>
+        <a href="organisaties.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Voor Organisaties</a>
+        <a href="gastverblijf.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Gastverblijf</a>
+        <a href="groepsruimte.html" class="text-primary font-bold cursor-pointer">Groepsruimte</a>
+        <a href="over-nathalie.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Over Nathalie</a>
+        <a href="tarieven.html" class="text-dark hover:text-primary transition-colors duration-200 cursor-pointer">Tarieven</a>
+        <a href="contact.html" class="bg-primary text-white px-4 py-2 rounded-xl hover:bg-primary-dark transition-colors duration-200 cursor-pointer">Contact</a>
+      </div>
+      <button id="menuBtn" class="md:hidden cursor-pointer p-2 min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Menu"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t"><div class="px-4 py-4 space-y-3">
+      <a href="individuen.html" class="block py-2 cursor-pointer">Voor Individuen</a><a href="organisaties.html" class="block py-2 cursor-pointer">Voor Organisaties</a><a href="gastverblijf.html" class="block py-2 cursor-pointer">Gastverblijf</a><a href="groepsruimte.html" class="block text-primary font-bold py-2">Groepsruimte</a><a href="over-nathalie.html" class="block py-2 cursor-pointer">Over Nathalie</a><a href="tarieven.html" class="block py-2 cursor-pointer">Tarieven</a><a href="contact.html" class="block bg-primary text-white text-center px-4 py-3 rounded-xl cursor-pointer">Contact</a>
+    </div></div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative pt-16 h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="images/groepsruimte1.jpg" alt="De Buitenruimte" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-dark/40"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Groepsruimte 'De Buitenruimte'</h1>
+      <p class="text-lg opacity-90 max-w-xl mx-auto">Een inspiratieplek voor maximaal 8 personen midden in het groen.</p>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-in mb-12">
+        <p class="text-dark/80 leading-relaxed mb-4">
+          Midden op het Brabantse platteland staat de Buitenruimte, een houten gebouw van ca. 40 m² en een ideale werk-, vergader-, speel-, deel-, leer-, inspiratie- en ontspanningsplek voor maximaal 8 personen.
+        </p>
+        <p class="text-dark/80 leading-relaxed mb-4">
+          De Buitenruimte kan gehuurd worden voor een uur, dagdeel of dag, doordeweeks en in het weekend, in elk seizoen (buiten de schoolvakanties).
+        </p>
+        <p class="text-dark/80 leading-relaxed">
+          De comfortabele, lichte ruimte wordt verwarmd met een pelletkachel en is voorzien van een wastafel. WiFi verbindt je met de wereld, het groene landschap rond de Buitenruimte brengt je dichtbij de natuur. Natuurlijk zijn er thee en koffie (met lekkernijen) en voor een lunch kan gezorgd worden.
+        </p>
+      </div>
+
+      <div class="bg-warm-beige rounded-2xl p-8 mb-12 fade-in">
+        <h2 class="font-script text-3xl text-primary mb-6">Wat er zoal gebeurt</h2>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="flex items-center gap-3"><svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/80">Yogalessen</span></div>
+          <div class="flex items-center gap-3"><svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/80">Theaterrepetities</span></div>
+          <div class="flex items-center gap-3"><svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/80">Scholingsdagen & teamsessies</span></div>
+          <div class="flex items-center gap-3"><svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/80">Qi Gong retraite</span></div>
+          <div class="flex items-center gap-3"><svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/80">Interactieve lezingen</span></div>
+          <div class="flex items-center gap-3"><svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/80">Mindfulness stiltedag</span></div>
+        </div>
+        <p class="text-dark/60 mt-4 text-sm">Bij voorstellingen en lezingen past er een publiek van ongeveer 15 personen.</p>
+      </div>
+
+      <!-- Foto's -->
+      <h2 class="font-script text-3xl text-primary mb-8 text-center fade-in">Fotoimpressie</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="rounded-xl overflow-hidden aspect-square fade-in"><img src="images/groepsruimte1.jpg" alt="Buitenruimte exterieur" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer gallery-img" loading="lazy"></div>
+        <div class="rounded-xl overflow-hidden aspect-square fade-in"><img src="images/groepsruimte2.jpg" alt="Buitenruimte interieur" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer gallery-img" loading="lazy"></div>
+        <div class="rounded-xl overflow-hidden aspect-square fade-in"><img src="images/groepsruimte3.jpg" alt="Buitenruimte" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer gallery-img" loading="lazy"></div>
+        <div class="rounded-xl overflow-hidden aspect-square fade-in"><img src="images/groepsruimte4.jpg" alt="Omgeving" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer gallery-img" loading="lazy"></div>
+        <div class="rounded-xl overflow-hidden aspect-square fade-in"><img src="images/groepsruimte5.jpg" alt="Buitenruimte detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer gallery-img" loading="lazy"></div>
+        <div class="rounded-xl overflow-hidden aspect-square fade-in"><img src="images/groepsruimte6.jpg" alt="Buitenruimte sfeer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 cursor-pointer gallery-img" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-primary text-white px-4 md:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center fade-in">
+      <h2 class="font-script text-4xl mb-6">De Buitenruimte huren?</h2>
+      <p class="text-lg opacity-90 mb-8">Neem contact op voor de mogelijkheden en beschikbaarheid.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:info@deveroovering.nl" class="bg-accent hover:bg-accent-light text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-200 cursor-pointer text-lg">E-mail</a>
+        <a href="tel:0623956027" class="border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-4 rounded-xl transition-colors duration-200 cursor-pointer text-lg">Bel 06 - 23 95 60 27</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white/80 py-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <div><div class="flex items-center gap-2 mb-4"><img src="images/spiraal.png" alt="" class="h-8 w-8"><span class="font-script text-2xl text-white font-bold">De Veroovering</span></div><p class="text-white/60">Maak ruimte voor groei.</p></div>
+      <div><h4 class="font-semibold text-white mb-4">Pagina's</h4><ul class="space-y-2"><li><a href="individuen.html" class="hover:text-white cursor-pointer">Voor Individuen</a></li><li><a href="organisaties.html" class="hover:text-white cursor-pointer">Voor Organisaties</a></li><li><a href="gastverblijf.html" class="hover:text-white cursor-pointer">Gastverblijf</a></li><li><a href="groepsruimte.html" class="hover:text-white cursor-pointer">Groepsruimte</a></li><li><a href="tarieven.html" class="hover:text-white cursor-pointer">Tarieven</a></li></ul></div>
+      <div><h4 class="font-semibold text-white mb-4">Contact</h4><ul class="space-y-2"><li><a href="mailto:info@deveroovering.nl" class="hover:text-white cursor-pointer">info@deveroovering.nl</a></li><li><a href="tel:0623956027" class="hover:text-white cursor-pointer">06 - 23 95 60 27</a></li><li>Zwarteweg 2, 5355 KE Neerlangel</li></ul></div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/10 text-center text-sm text-white/40"><p>&copy; 2026 De Veroovering — Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white cursor-pointer">Code Lieshout</a></p></div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" onclick="this.classList.remove('active')"><img id="lightboxImg" src="" alt="Foto vergroot"></div>
+
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', () => { document.getElementById('mobileMenu').classList.toggle('hidden'); });
+    document.querySelectorAll('.gallery-img').forEach(img => { img.addEventListener('click', () => { document.getElementById('lightboxImg').src = img.src; document.getElementById('lightbox').classList.add('active'); }); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('active'); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
